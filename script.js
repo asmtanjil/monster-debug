@@ -12,7 +12,7 @@ let startTime;
 let questionText = "";
 
 // Load and display question
-fetch("./texts.json")
+fetch("texts.json")
   .then((res) => res.json())
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
@@ -24,7 +24,7 @@ const typeController = (e) => {
   const newLetter = e.key;
 
   // Handle backspace press
-  if (newLetter == "Backspace") {
+  if (newLetter === "Backspace") {
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
@@ -67,7 +67,7 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
+  const timeTaken = parseInt((finishTime - startTime) / 1000);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -81,7 +81,7 @@ const gameOver = () => {
   resultModal.innerHTML = `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p>You made <span class="bold red">${errorCount++}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
 
