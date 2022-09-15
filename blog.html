@@ -31,16 +31,13 @@
 
     <link rel="stylesheet" href="./styles.css">
     <style>
-      .div-container{
-        background-color: #02B290;
-     ;
-      }
+      
     </style>
   </head>
   <body class="container fluid">
 
         <mian class="container text-dark">
-          <div class="div-container m-2 p-3 rounded">
+          <div class="bg-info m-2 p-3 rounded">
             <p class="fs-5">1. What are the differences between Local Storage & Session Storage <span><i class="bi bi-question-lg"></i></span>
               </p>
            <p><span class="fw-bold">Answer:</span> <br>
@@ -50,7 +47,7 @@
           </p>
           </div>
 
-          <div class="div-container m-2 p-3 rounded">
+          <div class="bg-info m-2 p-3 rounded">
             <p class="fs-5">2. What are the differences between Global Scope & Block Scope<span><i class="bi bi-question-lg"></i></span>
               </p>
            <p><span class="fw-bold">Answer:</span> <br>
@@ -62,7 +59,7 @@
           </p>
           </div>
 
-          <div class="div-container m-2 p-3 rounded">
+          <div class="bg-info m-2 p-3 rounded">
             <p class="fs-5">3. How does EventLoop work <span><i class="bi bi-question-lg"></i></span>
               </p>
            <p><span class="fw-bold">Answer:</span> <br>
@@ -70,7 +67,23 @@
             <li style="list-style: square;">JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks</li>
           </p>
           </div>
-         
+          <div class="bg-info m-2 p-3 rounded">
+            <p class="fs-5">4. By how many ways we can get 'undefined' <span><i class="bi bi-question-lg"></i></span>
+              </p>
+           <p><span class="fw-bold">Answer:</span> <br>
+            <span class="fst-italic">8 reasons of returning undefined are described below:</span>
+            <ol>
+              <li>Variable that is not initialized will give 'undefined'</li>
+              <li>Function with no 'return' will give 'undefined'</li>
+              <li>Parameter that is not passed will be undefined</li>
+              <li>If return has nothing on the right side will return undefined</li>
+              <li>Trying to access into array elements outside of the index range will return undefined</li>
+              <li>Property that doesn't exist in an object will give you undefined</li>
+              <li>Deleting an element inside an array will return undefined</li>
+              <li>Set a value directly to 'undefined' will return undefined</li>
+            </ol>
+          </p>
+          </div>
         </mian>
 
 
